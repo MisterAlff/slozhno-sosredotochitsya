@@ -7,5 +7,11 @@
   --main-weight: 400;
   --main-font-size: 18px;
   --accent-weight: 700;
+  --main-color: #FF0070;
   --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --shadow-color: #FF0070;
+  --subtitle-color: #000028;
+  --text-color: #F1B2CE;
+  --rec-decor-color: #FF0070;
 }
