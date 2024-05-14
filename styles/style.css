@@ -7,17 +7,19 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  padding-inline-start: var(--margin-s);
+  padding-inline-end: var(--margin-s);
 }
 
-.conteiner {
+/* .conteiner {
   margin-inline-start: var(--margin-s);
   margin-inline-end: var(--margin-s);
-}
+} */
 
 .header {
-  margin-block-start: var(--margin-s);
+  padding-block: var(--margin-s);
   margin-block-end: var(--margin-l);
-  block-size: max(calc(100vh - 1.25rem), calc(668px - 1.25rem));
+  block-size: max(100vh, 668px);
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   align-items: center;
@@ -27,17 +29,17 @@
 .rec__decor {
   position: absolute;
   inset-inline-end: 28px;
-  inset-block-start: 0;
+  inset-block-start: 11px;
   text-transform: uppercase;
   font-family: var(--main-font);
   font-weight: var(--main-weight);
   font-size: var(--main-font-size);
-  line-height: calc(25/18*100%);
+  line-height: calc(25 / 18 * 100%);
   color: var(--rec-decor-color);
 }
 
 .rec__decor::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   inline-size: 9px;
@@ -50,25 +52,25 @@
 }
 
 .decorated-zone::after {
-  content: '';
+  content: "";
   inline-size: 25px;
   block-size: 25px;
   border-block-end: 1px solid var(--main-color);
   border-inline-start: 1px solid var(--main-color);
   position: absolute;
   inset-inline-start: 0;
-  inset-block-end: 0;
+  inset-block-end: var(--margin-s);
 }
 
 .decorated-zone::before {
-  content: '';
+  content: "";
   inline-size: 25px;
   block-size: 25px;
   border-block-start: 1px solid var(--main-color);
   border-inline-end: 1px solid var(--main-color);
   position: absolute;
   inset-inline-end: 0;
-  inset-block-start: 0;
+  inset-block-start: var(--margin-s);
 }
 
 .header__theme-menu {
@@ -119,7 +121,7 @@
   font-family: var(--main-font);
   font-weight: var(--accent-weight);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: calc(96/116*100%);
+  line-height: calc(96 / 116 * 100%);
   color: var(--title-color);
   text-shadow: 4px 4px var(--shadow-color);
 }
@@ -129,7 +131,7 @@
   font-family: var(--main-font);
   font-weight: var(--accent-weight);
   font-size: var(--main-font-size);
-  line-height: calc(24/18*100%);
+  line-height: calc(24 / 18 * 100%);
   color: var(--subtitle-color);
   inline-size: min(100%, 355px);
 }
@@ -142,7 +144,7 @@
   font-family: var(--main-font);
   font-weight: var(--accent-weight);
   font-size: var(--main-font-size);
-  line-height: calc(23.5/18*100%);
+  line-height: calc(23.5 / 18 * 100%);
   color: var(--main-color);
   margin-block-end: var(--margin-m);
 }
@@ -151,7 +153,7 @@
   font-family: var(--main-font);
   font-weight: var(--accent-weight);
   font-size: var(--main-font-size);
-  line-height: calc(23.5/18*100%);
+  line-height: calc(23.5 / 18 * 100%);
   color: var(--subtitle-color);
   margin-block-end: var(--margin-s);
 }
@@ -160,7 +162,7 @@
   font-family: var(--main-font);
   font-weight: var(--main-weight);
   font-size: var(--main-font-size);
-  line-height: calc(23.5/18*100%);
+  line-height: calc(23.5 / 18 * 100%);
   color: var(--text-color);
   margin-block-end: var(--margin-m);
 }
@@ -181,14 +183,13 @@
 
 .cards__text a:focus-visible {
   outline: 1px solid currentColor;
-  
 }
 
 .cards__text__title {
   font-family: var(--main-font);
   font-weight: var(--main-weight);
   font-size: var(--main-font-size);
-  line-height: calc(23.5/18*100%);
+  line-height: calc(23.5 / 18 * 100%);
   color: var(--subtitle-color);
   margin-block-end: var(--margin-s);
 }
@@ -198,7 +199,7 @@
 }
 
 .cards__text:last-child {
-  margin-block-end: var(--margin-l);
+  margin-block-end: var(--margin-xl);
 }
 
 .picture {
@@ -214,41 +215,47 @@
 }
 
 .footer {
-  block-size: max(calc(100vh - 1.25rem), calc(668px - 1.25rem));
+  block-size: max(100vh, 668px);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-block-end: var(--margin-s);
 }
 
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-family: var(--main-font);
   font-weight: var(--accent-weight);
-  line-height: calc(96/116*100%);
+  line-height: calc(96 / 116 * 100%);
   color: var(--title-color);
-  text-shadow: 2px 2px var(--shadow-color); 
+  text-shadow: 2px 2px var(--shadow-color);
 }
 
 @media (width >= 768px) {
-
-  :root {
-    --margin-l: 5rem;
-  }
-
-  .conteiner {
-    margin-inline-start: var(--margin-m);
-    margin-inline-end: var(--margin-m);
+  
+  .page {
+    padding-inline-start: var(--margin-m);
+    padding-inline-end: var(--margin-m);
   }
 
   .header {
-    block-size: max(calc(100vh - 2.5rem), calc(1024px - 2.5rem));
-    margin-block-start: var(--margin-m);
-    margin-block-end: var(--margin-l);
+    block-size: max(100vh, 1024px);
+    padding-block: var(--margin-m);
+    margin-block-end: calc(var(--margin-m)*3);
   }
-  
-  
+
+  .rec__decor {
+    inset-block-start: 21px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: var(--margin-m);
+  }
+
+  .decorated-zone::before {
+    inset-block-start: var(--margin-m);
+  }
+
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: -2.6vw;
@@ -265,13 +272,13 @@
   }
 
   .cards__why .cards__title {
-    grid-row: 1/5 ;
+    grid-row: 1/5;
   }
 
   .cards__text:last-child {
-    margin-block-end: var(--margin-l);
+    margin-block-end: calc(var(--margin-l)*2);
   }
-  
+
   .cards__what .cards__title {
     inline-size: 236px;
   }
@@ -290,7 +297,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--margin-m);
-    margin-block-end: var(--margin-l);
+    margin-block-end: calc(var(--margin-m)*3);
   }
 
   .pictures .cards__subtitle {
@@ -329,7 +336,7 @@
   }
 
   .footer {
-    block-size: max(calc(100vh - 2.5rem), calc(1024px - 2.5rem));
+    block-size: max(100vh, 1024px);
   }
 
   .footer__title {
@@ -338,16 +345,9 @@
 }
 
 @media (width >= 1024px) {
-
-  .conteiner {
-    margin-inline-start: var(--margin-m);
-    margin-inline-end: var(--margin-m);
-  }
-
+  
   .header {
-    block-size: max(calc(100vh - 2.5rem), calc(768px - 2.5rem));
-    margin-block-start: var(--margin-m);
-    margin-block-end: var(--margin-l);
+    block-size: max(100vh, 768px);
   }
 
   .header__theme-menu {
@@ -362,7 +362,7 @@
   .header__title {
     margin-inline-start: -1.95vw;
   }
-  
+
   .header__text {
     inline-size: min(50%, 491px);
   }
@@ -380,7 +380,7 @@
 
   .cards__what .cards__title {
     grid-column: 1/4;
-    inline-size: 33%;    
+    inline-size: 33%;
   }
 
   .cards__what .cards__subtitle {
@@ -392,7 +392,6 @@
   }
 
   .footer {
-    block-size: max(calc(100vh - 2.5rem), calc(768px - 2.5rem));
+    block-size: max(100vh, 768px);
   }
-
 }
