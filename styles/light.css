@@ -16,6 +16,7 @@
   --subtitle-color: #000028;
   --text-color: #000028;
   --rec-decor-color: transparent;
+  --hover-decor-color: rgba(50, 49, 45, 0.4);
   background-image: url(../images/cover-image-light.png);
 }
 
@@ -28,6 +29,7 @@
     --subtitle-color: #000028;
     --text-color: #000028;
     --rec-decor-color: transparent;
+    --hover-decor-color: rgba(50, 49, 45, 0.4);
     }
   .page {
     background-image: url(../images/cover-image-light.png);

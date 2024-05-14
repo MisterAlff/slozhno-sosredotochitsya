@@ -16,5 +16,6 @@
   --subtitle-color: #000028;
   --text-color: #F1B2CE;
   --rec-decor-color: #FF0070;
+  --hover-decor-color: rgba(255, 0, 112, 0.4);
   background-image: url(../images/cover-image-dark.png);
 }
