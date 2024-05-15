@@ -3,6 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-image: url(../images/cover-image-dark.png);
+  background-color: var(--bg-dark-color);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,7 +105,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--main-color);
+  border-block-end: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active {
@@ -116,7 +117,7 @@
   justify-self: start;
   font-family: var(--main-font);
   font-weight: var(--accent-weight);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--logo-size);
   line-height: calc(96 / 116 * 100%);
   color: var(--title-color);
   text-shadow: 4px 4px var(--shadow-color);
@@ -136,6 +137,10 @@
   background-color: var(--accent-color);
 }
 
+.cards {
+  margin-block-end: var(--margin-xl);
+}
+
 .cards__title {
   font-family: var(--main-font);
   font-weight: var(--accent-weight);
@@ -145,7 +150,11 @@
   margin-block-end: var(--margin-m);
 }
 
-.cards__subtitle {
+.card:not(:last-child) {
+  margin-block-end: var(--margin-m);
+}
+
+.card__subtitle {
   font-family: var(--main-font);
   font-weight: var(--accent-weight);
   font-size: var(--main-font-size);
@@ -154,34 +163,35 @@
   margin-block-end: var(--margin-s);
 }
 
-.cards__text {
+.card__text {
   font-family: var(--main-font);
   font-weight: var(--main-weight);
   font-size: var(--main-font-size);
   line-height: calc(23.5 / 18 * 100%);
   color: var(--text-color);
-  margin-block-end: var(--margin-m);
 }
 
-.cards__text a {
+.card__text a {
   text-shadow: 2px 1px var(--accent-color);
   text-decoration: none;
 }
 
-.cards__text a:focus {
+.card__text a:focus {
   outline: none;
 }
 
-.cards__text a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.card__text a:hover {
+  border-block-end: 1px solid currentColor;
+  /* text-decoration: underline;
+  text-underline-offset: 4px; */
 }
 
-.cards__text a:focus-visible {
-  outline: 1px solid currentColor;
+.card__text a:focus-visible {
+  border: 1px solid currentColor;
+  /* outline: 1px solid currentColor; */
 }
 
-.cards__text__title {
+.card__text__title {
   font-family: var(--main-font);
   font-weight: var(--main-weight);
   font-size: var(--main-font-size);
@@ -190,12 +200,8 @@
   margin-block-end: var(--margin-s);
 }
 
-.cards__how .cards__subtitle {
+.cards__how .card__subtitle {
   margin-block-end: var(--margin-m);
-}
-
-.cards__text:last-child {
-  margin-block-end: var(--margin-xl);
 }
 
 .picture {
@@ -219,7 +225,7 @@
 }
 
 .footer__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--logo-size);
   font-family: var(--main-font);
   font-weight: var(--accent-weight);
   line-height: calc(96 / 116 * 100%);
@@ -230,6 +236,7 @@
 @media (width >= 768px) {
   
   :root {
+    --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --margin-l: 3.75rem;
     --margin-xl: 5rem;
   }
@@ -258,12 +265,15 @@
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: -2.6vw;
   }
 
   .header__text {
     inline-size: min(50%, 364px);
+  }
+  
+  .cards {
+    margin-block-end: var(--margin-xl);
   }
 
   .cards__why {
@@ -274,10 +284,6 @@
 
   .cards__why .cards__title {
     grid-row: 1/5;
-  }
-
-  .cards__text:last-child {
-    margin-block-end: var(--margin-xl);
   }
 
   .cards__what .cards__title {
@@ -301,7 +307,7 @@
     margin-block-end: var(--margin-l);
   }
 
-  .pictures .cards__subtitle {
+  .pictures .card__subtitle {
     grid-column: 1/4;
     grid-row: 1;
     margin-block-end: 0;
@@ -338,10 +344,6 @@
 
   .footer {
     block-size: max(100vh, 1024px);
-  }
-
-  .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -384,7 +386,7 @@
     inline-size: 33%;
   }
 
-  .cards__what .cards__subtitle {
+  .cards__what .card__subtitle {
     grid-row: 2;
   }
 

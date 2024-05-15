@@ -6,6 +6,7 @@
   --main-font: 'IBM Plex mono', monospace;
   --main-weight: 400;
   --main-font-size: 18px;
+  --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --accent-weight: 700;
   --main-color: #FF0070;
   --accent-color: #FF0070;
@@ -15,6 +16,8 @@
   --text-color: #F1B2CE;
   --rec-decor-color: #FF0070;
   --hover-decor-color: rgba(255, 0, 112, 0.4);
+  --bg-light-color: #FFF1F7;
+  --bg-dark-color: #000028;
   --margin-s: 0.625rem;   /*10px*/
   --margin-m: 1.25rem;    /*20px*/
   --margin-l: 2.5rem;     /*40px*/
