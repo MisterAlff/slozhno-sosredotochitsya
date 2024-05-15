@@ -11,11 +11,6 @@
   padding-inline-end: var(--margin-s);
 }
 
-/* .conteiner {
-  margin-inline-start: var(--margin-s);
-  margin-inline-end: var(--margin-s);
-} */
-
 .header {
   padding-block: var(--margin-s);
   margin-block-end: var(--margin-l);
@@ -233,6 +228,11 @@
 
 @media (width >= 768px) {
   
+  :root {
+    --margin-l: 3.75rem;
+    --margin-xl: 5rem;
+  }
+
   .page {
     padding-inline-start: var(--margin-m);
     padding-inline-end: var(--margin-m);
@@ -241,7 +241,7 @@
   .header {
     block-size: max(100vh, 1024px);
     padding-block: var(--margin-m);
-    margin-block-end: calc(var(--margin-m)*3);
+    margin-block-end: var(--margin-l);
   }
 
   .rec__decor {
@@ -276,7 +276,7 @@
   }
 
   .cards__text:last-child {
-    margin-block-end: calc(var(--margin-l)*2);
+    margin-block-end: var(--margin-xl);
   }
 
   .cards__what .cards__title {
@@ -297,7 +297,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--margin-m);
-    margin-block-end: calc(var(--margin-m)*3);
+    margin-block-end: var(--margin-l);
   }
 
   .pictures .cards__subtitle {
