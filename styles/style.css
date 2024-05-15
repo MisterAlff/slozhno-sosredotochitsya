@@ -9,6 +9,7 @@
   background-attachment: fixed;
   padding-inline-start: var(--margin-s);
   padding-inline-end: var(--margin-s);
+  margin: 0 auto;
 }
 
 .header {
